@@ -16,6 +16,21 @@ st.markdown("""
         font-size: 20px !important;
         font-weight: bold !important;
     }
+    /* Suurentaa valintapallojen (Radio) tekstiä */
+    div[data-testid="stMarkdownContainer"] p {
+        font-size: 22px !important;
+    }
+    
+    /* Suurentaa itse valintapalloja ja niiden välejä */
+    div[data-testid="stWidgetLabel"] p {
+        font-size: 22px !important;
+        font-weight: bold !important;
+    }
+
+    /* Suurentaa palloja ympäröivää tekstiä mobiilissa */
+    .st-bc {
+        font-size: 22px !important;
+    }
     </style>
     """, unsafe_allow_html=True)
 # Valitaan vuoan muoto
@@ -86,6 +101,7 @@ st.divider()
 # Taikina yhteensä alimmaisena
 
 st.markdown(f"### **Taikina yhteensä: {int(taikina_yhteensa)} g**")
+
 
 
 
