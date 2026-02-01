@@ -20,11 +20,11 @@ with col1:
 
 with col2:
     if muoto == "Suorakaide":
-        pituus = st.number_input("Pituus (cm)", min_value=1.0, value=25, step=0.1, format="%.1f")
-        leveys = st.number_input("Leveys (cm)", min_value=1.0, value=25, step=0.1, format="%.1f")
+        pituus = st.number_input("Pituus (cm)", min_value=1.0, value=25.0, step=0.1, format="%.1f")
+        leveys = st.number_input("Leveys (cm)", min_value=1.0, value=25.0, step=0.1, format="%.1f")
         pinta_ala = pituus * leveys
     else:
-        halkaisija = st.number_input("Halkaisija (cm)", min_value=1.0, value=20.0, step=0.1, format="%.1f")
+        halkaisija = st.number_input("Halkaisija (cm)", min_value=1.0, value=25.0, step=0.1, format="%.1f")
         pinta_ala = math.pow(halkaisija / 2, 2) * math.pi
     maara = st.number_input("Määrä", min_value=1, value=1)
 
@@ -73,4 +73,5 @@ st.divider()
 # Taikina yhteensä alimmaisena
 
 st.markdown(f"### **Taikina yhteensä: {int(taikina_yhteensa)} g**")
+
 
