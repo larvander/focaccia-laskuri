@@ -14,14 +14,14 @@ col1, col2 = st.columns(2)
 with col1:
     hydraatio = st.number_input("Hydraatio% (suositus 65-80)", min_value=1, max_value=100, value=75)
     # Suola yhdellä desimaalilla
-    suola_prosentti = st.number_input("Suola% (suositus 2.0-3.0", min_value=0.0, max_value=10.0, value=2.8, step=0.1, format="%.1f")
+    suola_prosentti = st.number_input("Suola% (suositus 2.0-3.0)", min_value=0.0, max_value=10.0, value=2.8, step=0.1, format="%.1f")
     # Korkeus kokonaislukuna
-    korkeus = st.number_input("Korkeus (cm)", min_value=1, max_value=10, value=3, step=1)
+    korkeus = st.number_input("Korkeus (cm)", min_value=1, max_value=10, value=4, step=1)
 
 with col2:
     if muoto == "Suorakaide":
-        pituus = st.number_input("Pituus (cm)", min_value=1.0, value=30.0, step=0.1, format="%.1f")
-        leveys = st.number_input("Leveys (cm)", min_value=1.0, value=20.0, step=0.1, format="%.1f")
+        pituus = st.number_input("Pituus (cm)", min_value=1.0, value=25, step=0.1, format="%.1f")
+        leveys = st.number_input("Leveys (cm)", min_value=1.0, value=25, step=0.1, format="%.1f")
         pinta_ala = pituus * leveys
     else:
         halkaisija = st.number_input("Halkaisija (cm)", min_value=1.0, value=20.0, step=0.1, format="%.1f")
@@ -73,3 +73,4 @@ st.divider()
 # Taikina yhteensä alimmaisena
 
 st.markdown(f"### **Taikina yhteensä: {int(taikina_yhteensa)} g**")
+
