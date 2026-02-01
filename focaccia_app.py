@@ -4,7 +4,20 @@ import math
 # Sovelluksen asetukset
 st.set_page_config(page_title="Focaccia-laskuri 1.6", page_icon="🍞")
 st.title("🍞 Focaccia-laskuri")
-
+# Lisää tämä koodin alkuun (otsikon jälkeen)
+st.markdown("""
+    <style>
+    /* Suurentaa syöttökenttien fonttia */
+    input {
+        font-size: 24px !important;
+    }
+    /* Suurentaa kenttien yläpuolella olevia otsikoita (labels) */
+    .stNumberInput label {
+        font-size: 20px !important;
+        font-weight: bold !important;
+    }
+    </style>
+    """, unsafe_allow_html=True)
 # Valitaan vuoan muoto
 muoto = st.radio("Valitse vuoan muoto:", ["Suorakaide", "Pyöreä"])
 
@@ -73,5 +86,6 @@ st.divider()
 # Taikina yhteensä alimmaisena
 
 st.markdown(f"### **Taikina yhteensä: {int(taikina_yhteensa)} g**")
+
 
 
