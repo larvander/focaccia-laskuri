@@ -4,7 +4,7 @@ import math
 # Sovelluksen asetukset
 st.set_page_config(page_title="Focaccia-laskuri 1.6", page_icon="🍞")
 st.title("🍞 Focaccia-laskuri")
-# Lisää tämä koodin alkuun (otsikon jälkeen)
+
 st.markdown("""
     <style>
     /* Suurentaa syöttökenttien fonttia */
@@ -82,7 +82,6 @@ taikina_vesi = vesi_yhteensa - poolish_vesi
 # --- TULOKSET ---
 st.divider()
 
-# Käytetään st.markdownia, jotta saadaan fonttikokoja säädettyä
 c1, c2 = st.columns(2)
 
 with c1:
@@ -98,9 +97,10 @@ with c2:
     st.markdown(f"#### **{suola_yhteensa:.1f} g** Suolaa")
 
 st.divider()
-# Taikina yhteensä alimmaisena
+
 
 st.markdown(f"### **Taikina yhteensä: {int(taikina_yhteensa)} g**")
+
 
 
 
